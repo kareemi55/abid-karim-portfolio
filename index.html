@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Abid Karim — DevOps and Site Reliability Engineer focused on cloud infrastructure, Terraform, Kubernetes, CI/CD and observability.">
+  <title>Abid Karim | DevOps & SRE Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--panel:#111a2e;--panel2:#0f1729;--line:#26334d;--text:#edf3ff;--muted:#a4b1c8;--cyan:#69e2d0;--blue:#8aa9ff;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#18284a 0,transparent 36%),var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#0b1020dc;backdrop-filter:blur(14px);border-bottom:1px solid #26334d99}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800;letter-spacing:-.04em}.brand span{color:var(--cyan)}
+    .navlinks{display:flex;gap:23px;color:var(--muted);font-size:13px}.navlinks a:hover,.textlink:hover{color:var(--cyan)}
+    .hero{padding:104px 0 88px;display:grid;grid-template-columns:1.35fr .65fr;gap:54px;align-items:center}
+    .eyebrow,.mono{font-family:"DM Mono",monospace;color:var(--cyan);font-size:12px;letter-spacing:.11em;text-transform:uppercase}
+    h1{font-size:clamp(42px,6.4vw,76px);line-height:1.05;letter-spacing:-.065em;margin:18px 0 22px}
+    h1 em{font-style:normal;color:var(--cyan)}.lead{font-size:18px;color:#c1cde0;max-width:680px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}.btn{padding:12px 18px;border-radius:8px;font-weight:800;font-size:13px;border:1px solid var(--line);display:inline-flex;align-items:center;gap:8px}.primary{background:var(--cyan);color:#07131c;border-color:var(--cyan)}.btn:hover{transform:translateY(-2px)}
+    .hero-card{background:linear-gradient(145deg,#15233d,#0e1729);border:1px solid var(--line);border-radius:18px;padding:25px;box-shadow:0 25px 70px #0004}
+    .terminal-top{display:flex;gap:7px;margin-bottom:22px}.dot{width:8px;height:8px;border-radius:50%;background:#52617a}.terminal-line{font-family:"DM Mono",monospace;font-size:12px;color:#b6c4dc;margin:13px 0}.terminal-line b{color:var(--cyan);font-weight:500}
+    section{padding:76px 0;border-top:1px solid #26334d88}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}
+    h2{font-size:clamp(28px,4vw,42px);letter-spacing:-.05em;line-height:1.1;margin:9px 0}.sub{color:var(--muted);max-width:620px}
+    .about-grid,.project-grid,.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .card{background:linear-gradient(145deg,var(--panel),var(--panel2));border:1px solid var(--line);border-radius:14px;padding:24px}
+    .card h3{margin:7px 0 10px;font-size:19px;letter-spacing:-.03em}.card p{margin:0;color:var(--muted);font-size:14px}
+    .tagrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tag{border:1px solid #34435e;border-radius:5px;padding:5px 9px;color:#c5d2e8;font:11px "DM Mono",monospace}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill h3{font-size:15px;margin:0 0 8px}.skill p{font-size:13px}
+    .project-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.project-no{color:var(--cyan);font:12px "DM Mono",monospace}
+    .project-grid .card{min-height:250px}.note{font-size:12px;color:#8f9eb7;margin-top:20px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{border-left:2px solid var(--cyan);padding:4px 0 4px 17px}.step strong{display:block;margin-bottom:5px}.step span{color:var(--muted);font-size:13px}
+    .contact{display:flex;justify-content:space-between;align-items:center;gap:30px;background:linear-gradient(120deg,#142b3a,#14203a);border:1px solid #315064;border-radius:18px;padding:34px}
+    .contact-email{display:inline-block;margin-top:12px;font-size:17px;font-weight:700;color:var(--cyan)}
+    .contact-email:hover{color:#dffef8}
+    footer{padding:30px 0;color:#7f8da6;font-size:12px;display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:76px 0 60px}.hero-card{max-width:520px}.skills{grid-template-columns:repeat(2,1fr)}.navlinks{gap:12px}.navlinks a:nth-child(2),.navlinks a:nth-child(4){display:none}.contact{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,var(--max))}nav{height:62px}.navlinks{font-size:11px;gap:10px}.about-grid,.project-grid,.skills,.steps{grid-template-columns:1fr}.section-head{display:block}.hero{padding-top:64px}.lead{font-size:16px}section{padding:58px 0}footer{display:block}}
+  </style>
+</head>
+<body>
+<header><nav class="wrap">
+  <a class="brand" href="#home">AK<span>.</span></a>
+  <div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#work">Projects</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div>
+</nav></header>
+<main id="home">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">DevOps · Cloud · Reliability</div>
+      <h1>Building reliable<br><em>cloud platforms.</em></h1>
+      <p class="lead">I'm Abid Karim, a DevOps and Site Reliability Engineer with 8 years of professional experience supporting cloud infrastructure, automation, delivery pipelines and production operations.</p>
+      <div class="actions">
+        <a class="btn primary" href="#work">Explore my work ↘</a>
+        <a class="btn" href="mailto:kareemabid55@gmail.com?subject=Project%20Inquiry">Contact me ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/abid-karim-4b8570227/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="terminal-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+      <div class="terminal-line"><b>$</b> whoami</div>
+      <div class="terminal-line">Abid Karim / DevOps & SRE</div>
+      <div class="terminal-line"><b>$</b> focus --areas</div>
+      <div class="terminal-line">Cloud infrastructure</div>
+      <div class="terminal-line">Infrastructure as Code</div>
+      <div class="terminal-line">Kubernetes & CI/CD</div>
+      <div class="terminal-line">Observability & reliability</div>
+      <div class="terminal-line"><b>$</b> work --preference</div>
+      <div class="terminal-line">Remote opportunities · Global teams</div>
+    </div>
+  </div>
+
+  <section id="about"><div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">01 / About</div><h2>Practical engineering.<br>Reliable operations.</h2></div></div>
+    <div class="about-grid">
+      <div class="card"><h3>What I do</h3><p>I work across cloud infrastructure, infrastructure automation, container platforms, CI/CD and monitoring. My approach is to make environments repeatable, deployments safer, and systems easier to operate.</p></div>
+      <div class="card"><h3>How I work</h3><p>I favour Infrastructure as Code, clear deployment workflows, useful observability and documented operational practices. I collaborate with development and operations teams to investigate issues and improve delivery.</p></div>
+    </div>
+  </div></section>
+
+  <section id="skills"><div class="wrap">
+    <div class="eyebrow">02 / Technical toolkit</div><h2>Tools I work with</h2>
+    <p class="sub">A selection of technologies from my cloud, DevOps and reliability work.</p>
+    <div class="skills">
+      <div class="card skill"><h3>Cloud platforms</h3><p>AWS · Microsoft Azure · Google Cloud · DigitalOcean</p></div>
+      <div class="card skill"><h3>Infrastructure as Code</h3><p>Terraform · CloudFormation · Ansible</p></div>
+      <div class="card skill"><h3>Containers & orchestration</h3><p>Kubernetes · Amazon EKS · ECS · Docker · Docker Swarm</p></div>
+      <div class="card skill"><h3>CI/CD & delivery</h3><p>Jenkins · GitHub Actions · GitLab CI · Argo CD · Spinnaker</p></div>
+      <div class="card skill"><h3>Monitoring & observability</h3><p>Splunk · Datadog · Dynatrace · Prometheus · Grafana · ELK · CloudWatch</p></div>
+      <div class="card skill"><h3>Scripting & operations</h3><p>Bash · Python · Linux · SLI/SLO · SQL · MySQL · MongoDB</p></div>
+    </div>
+  </div></section>
+
+  <section id="work"><div class="wrap">
+    <div class="eyebrow">03 / Selected experience</div><h2>Infrastructure and delivery work</h2>
+    <p class="sub">Representative project summaries based on my professional experience. Client-sensitive details and credentials are intentionally excluded.</p>
+    <div class="project-grid" style="margin-top:28px">
+      <article class="card">
+        <div class="project-top"><span class="project-no">CASE STUDY 01</span><span class="mono">AWS · IaC</span></div>
+        <h3>Cloud infrastructure automation</h3>
+        <p>Worked on AWS environments using Terraform, with infrastructure components including EC2, S3, RDS, Lambda, API Gateway, Route 53, CloudFront and CloudWatch. The work involved repeatable infrastructure provisioning and environment configuration.</p>
+        <div class="tagrow"><span class="tag">Terraform</span><span class="tag">AWS</span><span class="tag">CloudWatch</span><span class="tag">Networking</span></div>
+      </article>
+      <article class="card">
+        <div class="project-top"><span class="project-no">CASE STUDY 02</span><span class="mono">CI/CD · AWS</span></div>
+        <h3>Application delivery pipelines</h3>
+        <p>Contributed to deployment workflows using Jenkins and AWS services, including CodePipeline and Lambda-based components. Focus areas included coordinating application delivery and supporting environment-specific releases.</p>
+        <div class="tagrow"><span class="tag">Jenkins</span><span class="tag">CodePipeline</span><span class="tag">Lambda</span><span class="tag">Release workflows</span></div>
+      </article>
+      <article class="card">
+        <div class="project-top"><span class="project-no">CASE STUDY 03</span><span class="mono">Containers</span></div>
+        <h3>Container platforms & orchestration</h3>
+        <p>Hands-on experience supporting containerized workloads with Docker, Kubernetes, Amazon EKS and ECS. Work includes deployment configuration, service operations and troubleshooting across environments.</p>
+        <div class="tagrow"><span class="tag">Kubernetes</span><span class="tag">EKS</span><span class="tag">ECS</span><span class="tag">Docker</span></div>
+      </article>
+      <article class="card">
+        <div class="project-top"><span class="project-no">CASE STUDY 04</span><span class="mono">SRE · Observability</span></div>
+        <h3>Monitoring & operational visibility</h3>
+        <p>Used monitoring and observability platforms including Splunk, Datadog and Dynatrace, alongside Prometheus, Grafana and CloudWatch, to support troubleshooting and operational awareness.</p>
+        <div class="tagrow"><span class="tag">Splunk</span><span class="tag">Datadog</span><span class="tag">Dynatrace</span><span class="tag">Prometheus</span></div>
+      </article>
+    </div>
+    <p class="note">Before publishing detailed case studies, add only verified architecture details, your exact responsibilities, and outcomes you can substantiate. Do not include confidential client names, diagrams, account IDs, IPs, secrets or internal screenshots.</p>
+  </div></section>
+
+  <section id="approach"><div class="wrap">
+    <div class="eyebrow">04 / Engineering approach</div><h2>From infrastructure to operations</h2>
+    <div class="steps" style="margin-top:28px">
+      <div class="step"><strong>01 · Understand</strong><span>Review the application, infrastructure, delivery process and operational requirements.</span></div>
+      <div class="step"><strong>02 · Automate</strong><span>Use repeatable IaC and delivery workflows to reduce manual configuration.</span></div>
+      <div class="step"><strong>03 · Operate & improve</strong><span>Use monitoring, troubleshooting and clear documentation to improve reliability.</span></div>
+    </div>
+  </div></section>
+
+  <section id="contact"><div class="wrap">
+    <div class="contact">
+      <div><div class="eyebrow">05 / Contact</div><h2>Let's build and operate<br>better systems.</h2><p class="sub">Open to remote DevOps, Cloud Engineering and SRE opportunities.</p><a class="contact-email" href="mailto:kareemabid55@gmail.com?subject=Project%20Inquiry">kareemabid55@gmail.com</a></div>
+      <div class="actions">
+        <a class="btn primary" href="mailto:kareemabid55@gmail.com?subject=Project%20Inquiry">Email me ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/abid-karim-4b8570227/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div></section>
+</main>
+<footer class="wrap"><span>© <span id="year"></span> Abid Karim</span><span>DevOps · Cloud Infrastructure · Site Reliability</span></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body></html>
